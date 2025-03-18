@@ -20,7 +20,7 @@
     "dist"
   ],
   "dependencies": {
-    "@elizaos/cli": "1.0.0-alpha.67",
+    "@elizacn/cli": "0.0.1",
     "@elizaos/core": "1.0.0-alpha.67",
     "@elizaos/plugin-anthropic": "1.0.0-alpha.67",
     "@elizaos/plugin-openai": "1.0.0-alpha.67",
