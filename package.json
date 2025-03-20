@@ -1,7 +1,7 @@
 {
-  "name": "project",
+  "name": "beta",
   "description": "Project starter for elizaOS",
-  "version": "1.0.0-alpha.67",
+  "version": "1.0.0-beta.7",
   "type": "module",
   "private": true,
   "main": "dist/index.js",
@@ -20,11 +20,12 @@
     "dist"
   ],
   "dependencies": {
-    "@elizacn/cli": "0.0.1",
-    "@elizaos/core": "1.0.0-alpha.67",
-    "@elizaos/plugin-anthropic": "1.0.0-alpha.67",
-    "@elizaos/plugin-openai": "1.0.0-alpha.67",
-    "@elizaos/plugin-sql": "1.0.0-alpha.67",
+    "@elizaos/cli": "1.0.0-beta.7",
+    "@elizaos/core": "1.0.0-beta.7",
+    "@elizaos/plugin-anthropic": "1.0.0-beta.7",
+    "@elizaos/plugin-local-ai": "1.0.0-beta.7",
+    "@elizaos/plugin-openai": "1.0.0-beta.7",
+    "@elizaos/plugin-sql": "1.0.0-beta.7",
     "zod": "3.24.2"
   },
   "devDependencies": {
@@ -32,12 +33,13 @@
     "prettier": "3.5.3"
   },
   "scripts": {
-    "start": "npx @elizaos/cli start",
-    "dev": "npx @elizaos/cli dev",
+    "version": "elizaos --version",
+    "start": "elizaos start",
+    "dev": "elizaos dev",
     "build": "tsup",
     "lint": "prettier --write ./src",
-    "test": "npx @elizaos/cli test",
-    "deploy": "npx @elizaos/cli deploy",
+    "test": "elizaos test",
+    "deploy": "elizaos deploy",
     "format": "prettier --write ./src",
     "format:check": "prettier --check ./src"
   },
