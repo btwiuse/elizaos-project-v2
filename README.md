@@ -1,1 +1,1 @@
-# Plugin Starter
+# ElizaOS V2 Project Starter
