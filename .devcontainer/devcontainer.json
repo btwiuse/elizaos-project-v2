@@ -1,0 +1,28 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+  "name": "elizaos-dev",
+  "postCreateCommand": "echo unset NODE_OPTIONS >> ~/.bashrc; echo 'export PATH=\"$PATH:$HOME/go/bin:$HOME/.cargo/bin\"' >> ~/.bashrc",
+  "image": "btwiuse/arch:dev",
+  "privileged": true,
+  "runArgs": [
+    "--network=host"
+  ],
+  "containerEnv": {
+    //"MESA_D3D12_DEFAULT_ADAPTER_NAME": "NVIDIA", // uncomment for WSL
+    //"LD_LIBRARY_PATH": "/usr/lib/wsl/lib" // uncomment for WSL
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // "vscode.json-language-features",
+        // "vscode.css-language-features",
+        // "foxundermoon.shell-format",
+        // "dbaeumer.vscode-eslint",
+        // "esbenp.prettier-vscode"
+        // "ms-python.python"
+      ]
+    }
+  },
+  "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+  "features": {}
+}
