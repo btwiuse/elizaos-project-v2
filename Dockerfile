@@ -1,10 +1,6 @@
-FROM btwiuse/arch:bun
+FROM btwiuse/arch:elizaos
 
 COPY . /app
-
-WORKDIR /
-
-RUN bash /app/setup-eliza
 
 WORKDIR /app
 
@@ -12,4 +8,6 @@ RUN bun i
 
 RUN bun run build
 
-CMD ["elizaos", "start"]
+EXPOSE 3000
+
+CMD echo | elizaos start
