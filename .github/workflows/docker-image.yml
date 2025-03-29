@@ -20,15 +20,12 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-      continue-on-error: true
 
     - run: docker push btwiuse/elizaos-project-v2:${{ github.sha }}
       name: docker push
-      continue-on-error: true
 
     - run: |
-        docker tag btwiuse/ufo:${{ github.sha }} btwiuse/elizaos-project-v2
+        docker tag btwiuse/elizaos-project-v2:${{ github.sha }} btwiuse/elizaos-project-v2
         docker push btwiuse/elizaos-project-v2
       if: github.ref == 'refs/heads/master'
       name: docker push latest
-      continue-on-error: true
