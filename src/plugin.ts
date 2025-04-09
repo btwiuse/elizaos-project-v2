@@ -18,6 +18,14 @@ import starterTestSuite from "./tests";
 import HelloWorldAction from "./action/hello.ts";
 import MagicNumberAction from "./action/magic.ts";
 import QrCodeAction from "./action/qr.ts";
+import WalletConnectAction from "./action/wallet_connect.ts";
+import CounterGetAction from "./action/counter_get.ts";
+import CounterIncrAction from "./action/counter_incr.ts";
+import BlockHeightAction from "./action/block_height.ts";
+import GearApiService from "./service/GearApi.ts";
+import SignClientService from "./service/SignClient.ts";
+import SignMessageAction from "./action/sign_message.ts";
+import SignTransferTransactionAction from "./action/sign_transfer_transaction.ts";
 
 /**
  * Define the configuration schema for the plugin with the following properties:
@@ -85,6 +93,42 @@ export class StarterService extends Service {
 
   async stop() {
     logger.info("*** Stopping starter service instance ***");
+  }
+}
+
+export class CounterService extends Service {
+  static serviceType = "counter";
+  capabilityDescription =
+    "This is a counter service which is attached to the agent through the starter plugin.";
+  public count = 0;
+
+  constructor(protected runtime: IAgentRuntime) {
+    super(runtime);
+  }
+
+  static async start(runtime: IAgentRuntime) {
+    logger.info("*** Starting counter service ***");
+    const service = new CounterService(runtime);
+    return service;
+  }
+
+  static async stop(runtime: IAgentRuntime) {
+    logger.info("*** Stopping counter service ***");
+    // get the service from the runtime
+    const service = runtime.getService(CounterService.serviceType);
+    if (!service) {
+      throw new Error("Starter service not found");
+    }
+    service.stop();
+  }
+
+  public increment() {
+    logger.info(`*** Incrementing count by one (${this.count}) ***`);
+    this.count += 1;
+  }
+
+  async stop() {
+    logger.info("*** Stopping counter service instance ***");
   }
 }
 
@@ -178,11 +222,22 @@ const plugin: Plugin = {
       },
     ],
   },
-  services: [StarterService],
+  services: [
+    StarterService,
+    CounterService,
+    GearApiService,
+    SignClientService,
+  ],
   actions: [
     HelloWorldAction,
+    BlockHeightAction,
     MagicNumberAction,
-    QrCodeAction,
+    // QrCodeAction,
+    WalletConnectAction,
+    CounterGetAction,
+    CounterIncrAction,
+    SignMessageAction,
+    SignTransferTransactionAction,
   ],
   providers: [helloWorldProvider],
 };

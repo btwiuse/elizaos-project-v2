@@ -72,7 +72,7 @@ export const projectAgent: ProjectAgent = {
   init: async (runtime: IAgentRuntime) => await initCharacter({ runtime }),
   plugins: [
     starterPlugin,
-    varaPlugin,
+    // varaPlugin,
   ],
 };
 const project: Project = {
