@@ -18,14 +18,9 @@ import starterTestSuite from "./tests";
 import HelloWorldAction from "./action/hello.ts";
 import MagicNumberAction from "./action/magic.ts";
 import QrCodeAction from "./action/qr.ts";
-import WalletConnectAction from "./action/wallet_connect.ts";
 import CounterGetAction from "./action/counter_get.ts";
 import CounterIncrAction from "./action/counter_incr.ts";
 import BlockHeightAction from "./action/block_height.ts";
-import GearApiService from "./service/GearApi.ts";
-import SignClientService from "./service/SignClient.ts";
-import SignMessageAction from "./action/sign_message.ts";
-import SignTransferTransactionAction from "./action/sign_transfer_transaction.ts";
 
 /**
  * Define the configuration schema for the plugin with the following properties:
@@ -225,19 +220,14 @@ const plugin: Plugin = {
   services: [
     StarterService,
     CounterService,
-    GearApiService,
-    SignClientService,
   ],
   actions: [
     HelloWorldAction,
     BlockHeightAction,
     MagicNumberAction,
     // QrCodeAction,
-    WalletConnectAction,
     CounterGetAction,
     CounterIncrAction,
-    SignMessageAction,
-    SignTransferTransactionAction,
   ],
   providers: [helloWorldProvider],
 };

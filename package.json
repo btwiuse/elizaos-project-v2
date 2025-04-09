@@ -21,12 +21,12 @@
   ],
   "dependencies": {
     "@elizacn/plugin-mcp": "0.0.1",
-    "@elizacn/plugin-vara": "0.0.7",
-    "@elizaos/cli": "1.0.0-beta.23",
-    "@elizaos/core": "1.0.0-beta.23",
-    "@elizaos/plugin-anthropic": "1.0.0-beta.23",
-    "@elizaos/plugin-openai": "1.0.0-beta.23",
-    "@elizaos/plugin-sql": "1.0.0-beta.23",
+    "@elizacn/plugin-vara": "0.0.13",
+    "@elizaos/cli": "1.0.0-beta.28",
+    "@elizaos/core": "1.0.0-beta.28",
+    "@elizaos/plugin-anthropic": "1.0.0-beta.28",
+    "@elizaos/plugin-openai": "1.0.0-beta.28",
+    "@elizaos/plugin-sql": "1.0.0-beta.28",
     "@gear-js/api": "^0.41.0",
     "@walletconnect/keyvaluestorage": "^1.1.1",
     "@walletconnect/sign-client": "^2.19.2",
@@ -34,8 +34,8 @@
     "zod": "3.24.2"
   },
   "devDependencies": {
-    "tsup": "8.4.0",
-    "prettier": "3.5.3"
+    "prettier": "3.5.3",
+    "tsup": "8.4.0"
   },
   "scripts": {
     "start": "npx @elizaos/cli start",
