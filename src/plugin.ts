@@ -16,8 +16,6 @@ import {
 import { z } from "zod";
 import starterTestSuite from "./tests";
 import HelloWorldAction from "./action/hello.ts";
-import MagicNumberAction from "./action/magic.ts";
-import QrCodeAction from "./action/qr.ts";
 import CounterGetAction from "./action/counter_get.ts";
 import CounterIncrAction from "./action/counter_incr.ts";
 import BlockHeightAction from "./action/block_height.ts";
@@ -224,8 +222,6 @@ const plugin: Plugin = {
   actions: [
     HelloWorldAction,
     BlockHeightAction,
-    MagicNumberAction,
-    // QrCodeAction,
     CounterGetAction,
     CounterIncrAction,
   ],
