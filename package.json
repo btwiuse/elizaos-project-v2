@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "@elizacn/plugin-mcp": "0.0.2",
-    "@elizacn/plugin-vara": "0.0.15",
+    "@elizacn/plugin-vara": "0.0.16",
     "@elizaos/cli": "1.0.0-beta.32",
     "@elizaos/core": "1.0.0-beta.32",
     "@elizaos/plugin-anthropic": "1.0.0-beta.32",
