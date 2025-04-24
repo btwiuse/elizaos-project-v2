@@ -50,3 +50,7 @@ elizaos dev
 ```
 
 4. visit the ElizaOS UI at [http://localhost:3000](http://localhost:3000)
+
+5. pair your wallet via walletconnect
+
+Example web wallet: https://wallet.gear.sh (enable testnets in settings to see Vara Testnet)
