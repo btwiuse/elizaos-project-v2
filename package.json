@@ -35,7 +35,8 @@
   },
   "devDependencies": {
     "prettier": "3.5.3",
-    "tsup": "8.4.0"
+    "tsup": "8.4.0",
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "start": "npx @elizaos/cli start",
