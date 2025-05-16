@@ -22,6 +22,7 @@ export const character: Character = {
   username: "jose",
   plugins: [
     "@elizaos/plugin-sql",
+    ...(!process.env.IGNORE_BOOTSTRAP ? ['@elizaos/plugin-bootstrap'] : []),
     ...(process.env.OPENAI_API_KEY ? ["@elizaos/plugin-openai"] : []),
     ...(!process.env.OPENAI_API_KEY ? ["@elizaos/plugin-local-ai"] : []),
     ...(process.env.DISCORD_API_TOKEN ? ["@elizaos/plugin-discord"] : []),
