@@ -151,6 +151,7 @@ const plugin: Plugin = {
       throw error;
     }
   },
+/*
   models: {
     [ModelType.TEXT_SMALL]: async (
       _runtime,
@@ -172,6 +173,7 @@ const plugin: Plugin = {
       return "Never gonna make you cry, never gonna say goodbye, never gonna tell a lie and hurt you...";
     },
   },
+*/
   tests: [starterTestSuite],
   routes: [
     {
