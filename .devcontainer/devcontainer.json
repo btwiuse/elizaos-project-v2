@@ -2,7 +2,7 @@
 {
   "name": "elizaos-dev",
   "postCreateCommand": "echo unset NODE_OPTIONS >> ~/.bashrc; echo 'export PATH=\"$PATH:$HOME/go/bin:$HOME/.cargo/bin\"' >> ~/.bashrc",
-  "image": "btwiuse/arch:elizaos-dev",
+  "image": "btwiuse/arch:elizaos",
   "privileged": true,
   "runArgs": [
     "--network=host"
