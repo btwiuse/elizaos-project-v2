@@ -10,4 +10,4 @@ RUN bun run build
 
 EXPOSE 3000
 
-CMD echo | elizaos start
+CMD elizaos dev -c -b
