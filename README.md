@@ -1,5 +1,8 @@
 # ElizaOS V2 Project Starter
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btwiuse/elizaos-project-v2)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/btwiuse/elizaos-project-v2)
+
 What's included in this project starter:
 
 - A basic ElizaOS project structure
