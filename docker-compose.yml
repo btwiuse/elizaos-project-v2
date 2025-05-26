@@ -1,14 +1,9 @@
-version: '3'
-
 services:
   eliza:
     image: btwiuse/elizaos-project-v2:latest
     ports:
       - "3000:3000"
     working_dir: /app
-    command: sh -c "echo | elizaos start"
     restart: always
-    environment:
-      - OPENAI_BASE_URL="https://api.openai.com/v1"
-      - OPENAI_API_KEY="sk-*"
-      - EXAMPLE_PLUGIN_VARIABLE="foo"
+    env_file:
+      - .env
